@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { navigationProps } from './navigationProps/navigationProps'
-import Play from '../../../scenes/play/play'    
+import Play from '../../../scenes/play/Play'    
 import History from '../../../scenes/history/History'
 import Lyrics from '../../../scenes/lyrics/Lyrics'
 const Stack = createStackNavigator()
