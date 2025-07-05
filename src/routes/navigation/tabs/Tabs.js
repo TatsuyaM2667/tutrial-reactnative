@@ -2,6 +2,8 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import FontIcon from 'react-native-vector-icons/FontAwesome'
 import { colors } from 'theme'
+import { PlayStacks } from '../stacks/PlayStacks'
+
 
 // stack navigators
 import { HomeStacks } from '../stacks/HomeStacks'
@@ -76,6 +78,21 @@ export default function TabNavigator() {
           ),
         }}
       />
+            <Tab.Screen
+        name="PlayTab"
+        component={PlayStacks}
+        options={{
+          tabBarLabel: 'Play',
+          tabBarIcon: ({ color, size }) => (
+            <FontIcon
+              name="play-circle"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+
     </Tab.Navigator>
   )
 }
