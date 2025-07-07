@@ -5,7 +5,7 @@ import { fontSize } from "../../theme";
 
 export default function History() {
     const navigation = useNavigation();
-    const onButtonPress = () => {
+    const onButtonPress = (num) => {
         navigation.navigate("Lyrics",{pressedNum: num})
     }
 
@@ -13,12 +13,12 @@ export default function History() {
         <View style={styles.container}>
             <Text>これは履歴画面です。</Text>
             <TouchableOpacity
-            onPress={() => onButtonPress({num :1})}
+            onPress={() => onButtonPress(1)}
             >
                 <Text style={styles.buttonTitle}>私は１を押しました</Text>
             </TouchableOpacity>
                         <TouchableOpacity
-            onPress={() => onButtonPress({num :2})}
+            onPress={() => onButtonPress(2)}
             >
                 <Text style={styles.buttonTitle}>私は2を押しました</Text>
             </TouchableOpacity>
