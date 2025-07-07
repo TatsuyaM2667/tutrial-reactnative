@@ -1,4 +1,5 @@
 import React from 'react'
+import GradientHeader from '../../../components/GradientHeader';
 import { createStackNavigator } from '@react-navigation/stack'
 import { navigationProps } from './navigationProps/navigationProps'
 import Play from '../../../scenes/play/Play'    
@@ -18,8 +19,8 @@ export const PlayStacks = () => {
       
         options={({ navigation }) => ({
           title: 'Play',
-          headerShown: false,
-          headerBackTitleVisible: false,
+          headerShown: true,
+          headerBackTitleVisible: true,
           headerBackground: () => <GradientHeader />,
         })}
       />
@@ -28,7 +29,8 @@ export const PlayStacks = () => {
         component={History}
         options={({ navigation }) => ({
           title: 'History',
-          headerBackTitleVisible: false,
+          headerShown: true,
+          headerBackTitleVisible: true,
           headerBackground: () => <GradientHeader />,
         })}
       />
@@ -37,7 +39,8 @@ export const PlayStacks = () => {
         component={Lyrics}
         options={({ navigation }) => ({
           title: 'Lyrics',
-          headerBackTitleVisible: false,
+          headerShown: true,
+          headerBackTitleVisible: true,
           headerBackground: () => <GradientHeader />,
         })}
       />
