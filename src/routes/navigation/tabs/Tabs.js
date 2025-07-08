@@ -2,13 +2,15 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import FontIcon from 'react-native-vector-icons/FontAwesome'
 import { colors } from 'theme'
-import { PlayStacks } from '../stacks/PlayStacks'
+
 
 
 // stack navigators
 import { HomeStacks } from '../stacks/HomeStacks'
 import { ProfileStacks } from '../stacks/ProfileStacks'
 import { ReadWriteStacks } from '../stacks/ReadWriteStacks'
+import { PlayStacks } from '../stacks/PlayStacks'
+import { SearchStacks } from '../stacks/SearchStacks'
 
 const Tab = createBottomTabNavigator()
 
@@ -50,6 +52,7 @@ export default function TabNavigator() {
           ),
         }}
       />
+
       <Tab.Screen
         name="ProfileTab"
         component={ProfileStacks}
@@ -64,6 +67,7 @@ export default function TabNavigator() {
           ),
         }}
       />
+
       <Tab.Screen
         name="ReadWriteTab"
         component={ReadWriteStacks}
@@ -78,7 +82,8 @@ export default function TabNavigator() {
           ),
         }}
       />
-            <Tab.Screen
+
+      <Tab.Screen
         name="PlayTab"
         component={PlayStacks}
         options={{
@@ -92,6 +97,22 @@ export default function TabNavigator() {
           ),
         }}
       />
+
+      <Tab.Screen
+        name="SearchTab"
+        component={SearchStacks}
+        options={{
+          tabBarLabel: 'Search',
+          tabBarIcon: ({ color, size }) => (
+            <FontIcon
+              name="search"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+
 
     </Tab.Navigator>
   )
